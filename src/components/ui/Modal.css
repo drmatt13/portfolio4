@@ -1,0 +1,46 @@
+.modal-primary-background {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-secondary-background {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+.modal-master-container {
+  position: relative;
+  height: 500px;
+  width: 700px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 20px;
+}
+
+.modal-exit-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  transition: background-color 0.05s ease-in;
+}
+
+.modal-exit-btn:hover {
+  cursor: pointer;
+  background-color: tomato;
+}

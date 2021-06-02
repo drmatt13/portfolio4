@@ -1,0 +1,28 @@
+.react-app-primary-background {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 70px;
+}
+
+.react-app-secondary-background {
+  border-radius: 20px;
+  height: 80vh;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* padding: 20px; */
+  position: relative;
+}
+
+.react-app-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}

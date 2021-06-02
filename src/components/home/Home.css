@@ -1,0 +1,121 @@
+/* .master-home-container {
+  height: 200vh;
+  width: 100%;
+  overflow-x: hidden;
+} */
+
+.HOME-master-container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 10vh calc(2vw + 10vh * .75);
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.HOME-container1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.HOME-profile-image-container {
+  min-height: 225px;
+  min-width: 350px;
+  height: 35vh;
+  margin-bottom: 2.5vh;
+  display: flex;
+  justify-content: center;
+}
+
+.HOME-profile-image-container img {
+  height: 100%;
+  max-width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.HOME-profile-image-container img:hover {
+  cursor: pointer;
+}
+
+.HOME-small-images-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2.5vh;
+}
+
+.HOME-small-image-container {
+  min-height: 70px;
+  width: 20%;
+  max-height: 5.65vw;
+}
+
+.HOME-small-image-container img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: padding 0.05s ease-in;
+}
+
+.HOME-small-image-container:nth-of-type(4) img {
+  object-position: top;
+}
+
+.HOME-small-image-container img:hover {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.HOME-container2 {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.Home-container2-padding {
+  padding-right: 3vw;
+}
+
+.HOME-header-container {
+  margin-bottom: 2.5vh;
+}
+
+.HOME-mini-bio {
+  margin-bottom: 2.5vh;
+}
+
+.HOME-footer-container {}
+
+
+.HOME-icey {
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: rgb(204, 179, 179);
+  /* backdrop-filter: blur(10px); */
+  
+  /* -webkit-backdrop-filter: blur(20px); */
+}
+
+
+@media screen and (max-width: 900px) {
+  .HOME-master-container {
+    flex-direction: column;
+    padding-top: 5vh;
+  }
+
+  .HOME-container1 {
+    /* margin-top: 50px; */
+  }
+
+  /* FIX mini squares */
+  .HOME-small-image-container {
+    min-height: auto;
+    width: 20%;
+    max-height: calc(10vw + 5vh);
+  }
+
+  .Home-container2-padding {
+    padding-right: 0;
+  }
+}
