@@ -8,7 +8,7 @@ import Home from './components/home/Home';
 import ReactApp from './components/react app/ReactApp';
 import Modal from './components/ui/Modal';
 
-const examples = ['Path Finder', 'Todos'];
+const examples = ['Path_Finder', 'Todos'];
 
 function App() {
 
