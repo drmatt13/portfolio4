@@ -38,7 +38,7 @@ const App = () => {
   useEffect(() => {
     if (!initialAppLoad) localStorage.setItem('todosStorage', JSON.stringify({todos, finishedTodos}));
     console.log(todos);
-  }, [todos, finishedTodos])
+  }, [todos, finishedTodos, initialAppLoad])
 
   const toggleTheme = () => {
     if (theme.theme === 'light') setTheme({theme: 'dark', style: style.dark});

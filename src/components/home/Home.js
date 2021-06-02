@@ -22,23 +22,23 @@ const Home = () => {
     <div className="HOME-master-container fade-in">
       <div className="HOME-container1">
         <div className="HOME-profile-image-container no-select">
-          <img src="/images/home/home_profile_pic2.jpg" className="box-shadow1" alt="main-image" ref={profileImage}/>
+          <img src="/images/home/home_profile_pic2.jpg" className="box-shadow1" alt="main" ref={profileImage}/>
         </div>
         <div className="HOME-small-images-container no-select" ref={smallImagesContainer}>
           <div className="HOME-small-image-container">
-            <img src="/images/home/home_profile_pic2.jpg" className="box-shadow1" alt="main-image"/>
+            <img src="/images/home/home_profile_pic2.jpg" className="box-shadow1" alt="mini-1"/>
           </div>
           <div className="HOME-small-image-container">
-            <img src="/images/home/union1.jpg" alt="main-image"/>
+            <img src="/images/home/union1.jpg" alt="mini-2"/>
           </div>
           <div className="HOME-small-image-container">
-            <img src="/images/home/home_profile_pic.jpg" alt="main-image"/>
+            <img src="/images/home/home_profile_pic.jpg" alt="mini-3"/>
           </div>
           <div className="HOME-small-image-container">
-            <img src="/images/home/money1.jpg" alt="main-image"/>
+            <img src="/images/home/money1.jpg" alt="mini-4"/>
           </div>
           <div className="HOME-small-image-container">
-            <img src="/images/home/baby1.jpg" alt="main-image"/>
+            <img src="/images/home/baby1.jpg" alt="mini-5"/>
           </div>
         </div>
 

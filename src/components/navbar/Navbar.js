@@ -11,7 +11,7 @@ const Navbar = ({redirect, modal, setModal}) => {
   }, [mobile])
 
   const toggleModal = (s) => {
-    modal == s ? setModal(null) : setModal(s)
+    modal === s ? setModal(null) : setModal(s)
   }
 
   return (

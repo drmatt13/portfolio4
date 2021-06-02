@@ -32,8 +32,8 @@ function App() {
 
     let endNode = startNode;
 
-    while (startNode == endNode) endNode = [randomNum(columns), randomNum(rows)];
-    // while (startNode == endNode) endNode = [9, 7];
+    while (startNode === endNode) endNode = [randomNum(columns), randomNum(rows)];
+    // while (startNode === endNode) endNode = [9, 7];
 
     setStartNode(startNode);
     setEndNode(endNode);

@@ -18,8 +18,8 @@ const Grid = ({ rows, columns, startNode, endNode, drawMode }) => {
     for (let i=0; i<rows; i++) {
       const row = [];
       for (let j=0; j<columns; j++) {
-        let start = startNode[0] == j && startNode[1] == i ? true : false,
-          end = endNode[0] == j && endNode[1] == i ? true : false;
+        let start = startNode[0] === j && startNode[1] === i ? true : false,
+          end = endNode[0] === j && endNode[1] === i ? true : false;
         row.push({
           start,
           end,
