@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Grid from './components/Grid';
 import Bloom from './components/Bloom';
 
@@ -25,7 +25,7 @@ function App() {
   const [cornerCases, setCornerCases] = useState(false);
   const [run, setRun] = useState(false);
 
-  const randomizeStartEndNodes = () => {
+  const randomizeStartEndNodes = useCallback(() => {
     
     const startNode = [randomNum(columns), randomNum(rows)];
     // const startNode = [0, 5];
@@ -37,30 +37,30 @@ function App() {
 
     setStartNode(startNode);
     setEndNode(endNode);
-  }
+  }, [columns, rows]);
 
-  const generateSeed = () => {
+  const generateSeed = useCallback(() => {
     return `${columns}${rows}${startNode[0]}${startNode[1]}${endNode[0]}${endNode[1]}`;
-  }
+  }, [columns, endNode, rows, startNode]);
 
-  const reset = () => {
+  const reset = useCallback(() => {
     setColumns(columnsRef.current.value);
     setRows(rowsRef.current.value);
     setRun(false);
     randomizeStartEndNodes();
     startRef.current.classList.remove("PATH__btn-selected");
-  }
+  }, [randomizeStartEndNodes]);
 
   useEffect(() => {
     setSeed(generateSeed());
     console.log(startNode);
-  }, [startNode, endNode]);
+  }, [startNode, endNode, generateSeed]);
 
   useEffect(() => {
     columnsRef.current.value = columns;
     rowsRef.current.value = rows;
     reset();
-  }, [])
+  }, [columns, rows, reset])
 
   const toggleDrawingMode = e => {
     document.querySelectorAll(".PATH__option")[drawMode].classList.remove("PATH__btn-selected");

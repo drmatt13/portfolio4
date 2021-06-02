@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 // classes
 import Queue from '../classes/Queue';
@@ -10,15 +10,15 @@ const Bloom = ({ columns, rows, startNode, cornerCases }) => {
   const [queue] = useState(new Queue());
   const [memory] = useState(new Memory());
 
-  const decode = (x, y) => {
+  const decode = useCallback((x, y) => {
     const range = columns*rows;
     if (y<0||x<=-1||x>=columns) return undefined;
     const num = y*columns + x;
     const decodedValue = -1 < num < range ? num : -1;
     return decodedValue > -1 ? grid.children[decodedValue] : undefined;
-  }
+  }, [columns, grid.children, rows]);
 
-  const bloom = () => {
+  const bloom = useCallback(() => {
     const [x, y] = queue.dequeue();
     const node = decode(x, y);
     if (node) {
@@ -42,13 +42,13 @@ const Bloom = ({ columns, rows, startNode, cornerCases }) => {
     // setTimeout(() => {
     //   if (queue.size) requestAnimationFrame(bloom);
     // }, 100);
-  }
+  }, [cornerCases, decode, memory, queue]);
 
   useEffect(() => {
     memory.shouldProcess(startNode[0], startNode[1]);
     queue.enqueue([startNode[0], startNode[1]]);
     bloom();
-  }, []);
+  }, [bloom, memory, queue, startNode]);
 
   return <></>;
 }

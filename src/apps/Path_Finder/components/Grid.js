@@ -31,7 +31,7 @@ const Grid = ({ rows, columns, startNode, endNode, drawMode }) => {
     }
     console.log(nodes);
     setNodes(nodes);
-  }, []);
+  }, [columns, endNode, rows, startNode]);
 
   const onMouseDown = e => {
     e.preventDefault();
