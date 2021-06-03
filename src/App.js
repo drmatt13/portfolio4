@@ -1,6 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-// import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 
 // components
@@ -15,15 +14,18 @@ const examples = ['Path_Finder', 'Todos'];
 // check if mobile device
 const mobile = /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-//
+// different backgrounds for web vs mobile
 const backgroundImage = !mobile 
   ? "https://cdn.wallpapersafari.com/33/97/xYrqAN.jpeg"
-  : "https://i.pinimg.com/564x/37/5f/2b/375f2b32a3e7a5767ae5aef3566c851c.jpg";
+  : "https://images.unsplash.com/photo-1563807328654-8aace77b5aa6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2745&q=80";
 
 function App() {
 
   const [route, setRoute] = useState("/"); 
   const [modal, setModal] = useState(null);
+  const [masterContainer, setMasterContainer] = useState(null);
+
+  const masterContainerRef = useRef();
 
   const redirect = (route) => {
     setModal(null);
@@ -34,10 +36,15 @@ function App() {
     setModal(null);
   }, [route])
 
+  useEffect(() => {
+    setMasterContainer(masterContainerRef.current);
+  }, [])
+
   return <Router>
     {!modal && <Redirect to={route} />}
     <div 
       className="master-portfolio-container"
+      ref={masterContainerRef}
       style={{
         backgroundImage: `url(${backgroundImage})`
       }}
@@ -48,7 +55,7 @@ function App() {
       </Switch>
       {modal && <Modal setRoute={setRoute} modal={modal} setModal={setModal} examples={examples} />}
       <div id="modal" />
-      <Navbar mobile={mobile} redirect={redirect} modal={modal} setModal={setModal} />
+      <Navbar mobile={mobile} masterContainer={masterContainer} redirect={redirect} modal={modal} setModal={setModal} />
     </div>
   </Router>
 }

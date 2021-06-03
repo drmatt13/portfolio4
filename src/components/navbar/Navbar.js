@@ -1,14 +1,32 @@
-// import { useCallback } from 'react';
+import { useEffect, useCallback, useRef } from 'react';
 import './Navbar.css';
 
-const Navbar = ({mobile, redirect, modal, setModal}) => {
+const Navbar = ({mobile, masterContainer, redirect, modal, setModal}) => {
 
-  const toggleModal = (s) => {
+  const masterNavbarRef = useRef();
+
+  const toggleModal = useCallback((s) => {
     modal === s ? setModal(null) : setModal(s)
-  }
+  }, [modal, setModal]);
+
+  const navbarShift = useCallback((div1, div2) => {
+    if (div1.scrollHeight > div1.clientHeight) div2.classList.add("navbar-web-shift");
+    else div2.classList.remove("navbar-web-shift")
+  }, []);
+
+
+  useEffect(() => {
+    if (masterContainer) 
+      if (!mobile) {
+        navbarShift(masterContainer, masterNavbarRef.current);
+        window.addEventListener("resize", () => {
+          navbarShift(masterContainer, masterNavbarRef.current);
+        });
+      }
+  }, [mobile, masterContainer, navbarShift])
 
   return (
-    <div className={`master-navbar-container ${mobile ? "navbar-mobile" : "navbar-web"}`}>
+    <div className={`master-navbar-container ${mobile ? "navbar-mobile" : "navbar-web"}`} ref={masterNavbarRef}>
       <div className="navbar-btn" onClick={() => redirect("/")}>
         <i className="fas fa-home"></i>
       </div>

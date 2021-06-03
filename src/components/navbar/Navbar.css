@@ -60,10 +60,17 @@
 }
 
 @media screen and (max-width: 440px) {
+
   .navbar-web {
     width: 100%;
     border-radius: 0;
     padding: 0;
+    left: 0;
+    transform: translateX(0);
+  }
+
+  .navbar-web-shift {
+    width: calc(100vw - 17px) !important;
   }
 }
 
@@ -74,15 +81,11 @@
     transform: translateX(0);
   }
 
-  .navbar-web-shift {
-    width: calc(100vw - 17px) !important;
-  }
-
   .navbar-mobile {
     width: 100%;
     border-radius: 0;
     padding: 0;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.7);
     border-top: solid 1px rgba(0, 0, 0, 0.1);
   }
 
