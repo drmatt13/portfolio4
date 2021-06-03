@@ -7,8 +7,6 @@ const Navbar = ({mobile, redirect, modal, setModal}) => {
     modal === s ? setModal(null) : setModal(s)
   }
 
-  // const touch
-
   return (
     <div className={`master-navbar-container ${mobile ? "navbar-mobile" : "navbar-web"}`}>
       <div className="navbar-btn" onClick={() => redirect("/")}>
