@@ -8,14 +8,12 @@ import Home from './components/home/Home';
 import ReactApp from './components/react app/ReactApp';
 import Modal from './components/ui/Modal';
 
+// example react apps
 const examples = ['Path_Finder', 'Todos'];
 
-// We listen to the resize event
-window.addEventListener('resize', () => {
-  // We execute the same script as before
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-});
+// check if mobile device
+const mobile = /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
 
 function App() {
 
@@ -31,21 +29,18 @@ function App() {
     setModal(null);
   }, [route])
 
-  return <>
-    
-    <Router>
-      {!modal && <Redirect to={route} />}
-      <div className="master-portfolio-container">
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/:app" component={ReactApp} />
-        </Switch>
-        {modal && <Modal setRoute={setRoute} modal={modal} setModal={setModal} examples={examples} />}
-        <div id="modal" />
-      </div>
-      <Navbar redirect={redirect} modal={modal} setModal={setModal} />
-    </Router>
-  </>
+  return <Router>
+    {/* {!modal && <Redirect to={route} />}
+    <div className="master-portfolio-container">
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/:app" component={ReactApp} />
+      </Switch>
+      {modal && <Modal setRoute={setRoute} modal={modal} setModal={setModal} examples={examples} />}
+      <div id="modal" />
+    </div> */}
+    <Navbar mobile={mobile} redirect={redirect} modal={modal} setModal={setModal} />
+  </Router>
 }
 
 export default App;

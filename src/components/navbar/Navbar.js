@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 
-const Navbar = ({redirect, modal, setModal}) => {
-
-  const [mobile] = useState( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
-
-  // log mobile status
-  useEffect(() => {
-    console.log(mobile);
-  }, [mobile])
+const Navbar = ({mobile, redirect, modal, setModal}) => {
 
   const toggleModal = (s) => {
     modal === s ? setModal(null) : setModal(s)

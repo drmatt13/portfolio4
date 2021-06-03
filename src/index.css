@@ -5,8 +5,7 @@
 }
 
 html, body {
-  height: 100vh;
-  height: -webkit-fill-available;
+  height: 100%;
   overflow-y: hidden;
 }
 
@@ -17,6 +16,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
+  background-color: rgb(152, 139, 180);
 }
 
 .box-shadow1 {
