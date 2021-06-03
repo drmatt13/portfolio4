@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import './App.css';
 
 // components
 import Navbar from './components/navbar/Navbar';
@@ -46,7 +45,12 @@ function App() {
       className="master-portfolio-container"
       ref={masterContainerRef}
       style={{
-        backgroundImage: `url(${backgroundImage})`
+        backgroundImage: `url(${backgroundImage})`,
+        height: '100vh',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        position: 'relative',
+        overflowY: 'auto'
       }}
     >
       <Switch>
