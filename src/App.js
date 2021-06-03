@@ -42,8 +42,8 @@ function App() {
         </Switch>
         {modal && <Modal setRoute={setRoute} modal={modal} setModal={setModal} examples={examples} />}
         <div id="modal" />
-        <Navbar redirect={redirect} modal={modal} setModal={setModal} />
       </div>
+      <Navbar redirect={redirect} modal={modal} setModal={setModal} />
     </Router>
   </>
 }

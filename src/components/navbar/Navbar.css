@@ -1,5 +1,5 @@
 .master-navbar-container {
-  position: absolute;
+  position: fixed;
   height: 65px;
   bottom: 0;
 
