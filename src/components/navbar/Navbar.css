@@ -1,5 +1,5 @@
 .master-navbar-container {
-  position: absolute;
+  position: fixed;
   height: 65px;
   bottom: 0;
 
@@ -65,13 +65,9 @@
     width: 100vw;
     border-radius: 0;
     padding: 0;
-
-    /* width: calc(100vw - 17px); */
-    /* left: 18px !important; */
   }
 
   .navbar-web > div {
     width: calc(100vw - 17px) !important;
-    
   }
 }
