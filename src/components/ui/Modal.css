@@ -6,7 +6,9 @@
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  padding: 5vw;
+  padding-bottom: calc(5vw + 65px);
 }
 
 .modal-secondary-background {
@@ -17,13 +19,14 @@
 
 .modal-master-container {
   position: relative;
-  height: 500px;
+  max-height: 500px;
   width: 700px;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 20px;
+  /* margin-bottom: 10px; */
 }
 
 .modal-exit-btn {

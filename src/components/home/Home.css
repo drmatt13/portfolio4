@@ -20,7 +20,7 @@
 
 .HOME-profile-image-container {
   min-height: 225px;
-  min-width: 350px;
+  /* min-width: 350px; */
   height: 35vh;
   margin-bottom: 2.5vh;
   display: flex;
