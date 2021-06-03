@@ -1,26 +1,22 @@
 .master-navbar-container {
   position: fixed;
-  height: 65px;
-  bottom: 0;
+  
 
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 
-  
-  /* width: 100%; */
-}
-
-
-
-.navbar-container {
-  height: 100%;
+  height: 65px;
   width: 375px;
-  margin: auto;
+  
+
+  /* margin: auto; */
+
   padding: 0 20px;
+
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   background-color: rgba(255, 255, 255, 0.3);
-
 
   backdrop-filter: blur(10px);
 
@@ -28,12 +24,17 @@
   justify-content: space-around;
   align-items: center;
 
-  font-size: x-large;
 }
 
+.navbar-mobile {
+  height: 45px;
+  width: 300px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+
 .navbar-btn {
-  height: 50px;
-  width: 50px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.7);
   display: flex;
@@ -42,32 +43,63 @@
   transition: background-color .075s ease-in;
 }
 
+.navbar-web > .navbar-btn {
+  height: 50px;
+  width: 50px;
+  font-size: x-large;
+}
 
-.navbar-btn:hover {
+.navbar-web > .navbar-btn:hover {
   cursor: pointer;
   background-color: rgb(43, 228, 114);
 }
 
-/* .navbar-container a, .navbar-container a:visited {
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.85);
-  border-radius: 50%;
-} */
+.navbar-mobile > .navbar-btn {
+  height: 30px;
+  width: 30px;
+}
 
 @media screen and (max-width: 440px) {
+  .navbar-web {
+    width: 100%;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
 
   .master-navbar-container {
     left: 0;
     transform: translateX(0);
   }
 
-  .navbar-container {
-    width: 100vw;
-    border-radius: 0;
-    padding: 0;
+  .navbar-web-shift {
+    width: calc(100vw - 17px) !important;
   }
 
-  .navbar-web > div {
-    width: calc(100vw - 17px) !important;
+  .navbar-mobile {
+    width: 100%;
+    border-radius: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-top: solid 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-mobile > .navbar-btn {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-right: solid 1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    transition: none;
+  }
+
+  .navbar-mobile > .navbar-btn:last-of-type {
+    border-right: none;
   }
 }
