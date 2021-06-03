@@ -15,6 +15,10 @@ const examples = ['Path_Finder', 'Todos'];
 // check if mobile device
 const mobile = /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
+//
+const backgroundImage = !mobile 
+  ? "https://cdn.wallpapersafari.com/33/97/xYrqAN.jpeg"
+  : "https://i.pinimg.com/564x/37/5f/2b/375f2b32a3e7a5767ae5aef3566c851c.jpg";
 
 function App() {
 
@@ -32,7 +36,12 @@ function App() {
 
   return <Router>
     {!modal && <Redirect to={route} />}
-    <div className="master-portfolio-container">
+    <div 
+      className="master-portfolio-container"
+      style={{
+        backgroundImage: `url(${backgroundImage})`
+      }}
+    >
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/:app" component={ReactApp} />
