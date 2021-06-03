@@ -5,11 +5,12 @@
 } */
 
 .HOME-master-container {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   padding: 10vh calc(2vw + 10vh * .75);
   display: flex;
   flex-direction: row-reverse;
+  overflow-y: auto;
 }
 
 .HOME-container1 {
@@ -91,7 +92,7 @@
 .HOME-icey {
   font-weight: 600;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  background-color: rgb(204, 179, 179);
+  background-color: rgba(195, 179, 204, 0.514);
   /* backdrop-filter: blur(10px); */
   
   /* -webkit-backdrop-filter: blur(20px); */

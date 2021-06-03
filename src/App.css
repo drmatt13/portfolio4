@@ -1,8 +1,12 @@
+/* https://images.alphacoders.com/461/461992.jpg */
+/* https://cdn.wallpapersafari.com/33/97/xYrqAN.jpeg */
+/* https://cdn.wallpapersafari.com/7/52/fVwlDA.jpg */
 .master-portfolio-container {
   height: 100vh;
-  background-image: url("https://images.alphacoders.com/461/461992.jpg");
+  background-image: url("https://cdn.wallpapersafari.com/33/97/xYrqAN.jpeg");
   background-size: cover;
   background-position: center;
   overflow-y: auto;
   position: relative;
+  overflow-y: hidden;
 }
