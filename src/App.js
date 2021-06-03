@@ -10,6 +10,10 @@ import Modal from './components/ui/Modal';
 
 const examples = ['Path_Finder', 'Todos'];
 
+const appHeight = () => document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`)
+window.addEventListener('resize', appHeight)
+appHeight()
+
 function App() {
 
   const [route, setRoute] = useState("/"); 

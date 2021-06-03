@@ -2,11 +2,12 @@
 /* https://cdn.wallpapersafari.com/33/97/xYrqAN.jpeg */
 /* https://cdn.wallpapersafari.com/7/52/fVwlDA.jpg */
 .master-portfolio-container {
-  height: 100%;
+  height: var(--app-height);
+  /* height: 90vh; */
   background-image: url("https://cdn.wallpapersafari.com/33/97/xYrqAN.jpeg");
   background-size: cover;
   background-position: center;
   overflow-y: auto;
   position: relative;
-  /* overflow-y: scroll; */
+  overflow-y: hidden;
 }
