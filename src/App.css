@@ -2,7 +2,8 @@
 /* https://cdn.wallpapersafari.com/33/97/xYrqAN.jpeg */
 /* https://cdn.wallpapersafari.com/7/52/fVwlDA.jpg */
 .master-portfolio-container {
-  height: var(--app-height);
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
   /* height: 90vh; */
   background-image: url("https://cdn.wallpapersafari.com/33/97/xYrqAN.jpeg");
   background-size: cover;
