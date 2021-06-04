@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 // components
 import Navbar from './components/navbar/Navbar';
 import Home from './components/home/Home';
-import ReactApp from './components/react app/ReactApp';
-import Modal from './components/ui/Modal';
+import RenderApp from './components/render app/RenderApp';
+import Modal from './components/modal/Modal';
 
 // example react apps
 const examples = ['Path_Finder', 'Todos'];
@@ -55,7 +55,7 @@ function App() {
     >
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/:app" component={ReactApp} />
+        <Route path="/:app" component={RenderApp} />
       </Switch>
       {modal && <Modal setRoute={setRoute} modal={modal} setModal={setModal} examples={examples} />}
       <div id="modal" />

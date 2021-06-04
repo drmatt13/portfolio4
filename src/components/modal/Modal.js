@@ -1,12 +1,10 @@
+import { Suspense, lazy } from 'react';
 import { createPortal } from 'react-dom';
 import './Modal.css';
 
-import Examples from '../examples/Examples';
-import Contact from '../contact/Contact';
-import About from '../about/About';
-import Settings from '../settings/Settings';
-
 const Modal = ({setRoute, modal, setModal, examples}) => {
+
+  const App = lazy(() => import(`./modals/${modal}`));
 
   return createPortal(<>
     <div className="modal-primary-background fade-in-2">
@@ -15,13 +13,12 @@ const Modal = ({setRoute, modal, setModal, examples}) => {
         <div className="modal-exit-btn box-shadow1" onClick={() => setModal(null)}>
           <i className="fas fa-times"></i>
         </div>
-        {modal === "examples" && <Examples setRoute={setRoute} examples={examples} />}
-        {modal === "contact" && <Contact />}
-        {modal === "about" && <About />}
-        {modal === "settings" && <Settings />}
+          <Suspense fallback={<>Loading</>}>
+            <App setRoute={setRoute} examples={examples} />
+          </Suspense>
       </div>
     </div>
-  </>, document.getElementById('modal'))
+  </>, document.getElementById('modal'));
 }
 
-export default Modal
+export default Modal;

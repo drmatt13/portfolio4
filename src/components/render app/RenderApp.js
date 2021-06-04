@@ -1,10 +1,10 @@
 import { useEffect, Suspense, lazy } from 'react';
 import { useParams } from 'react-router-dom';
-import './ReactApp.css';
+import './RenderApp.css';
 
 let App = () => <></>;
 
-const ReactApp = () => {
+const RenderApp = () => {
 
   const { app } = useParams();
 
@@ -18,14 +18,12 @@ const ReactApp = () => {
   return <>
     <div className="react-app-primary-background">
       <div className="react-app-secondary-background fade-in">
-        {/* <div className="react-app-container"> */}
-          <Suspense fallback={<>Loading</>}>
-            <App />
-          </Suspense>
-        {/* </div> */}
+        <Suspense fallback={<>Loading</>}>
+          <App />
+        </Suspense>
       </div>
     </div>
   </>
 }
 
-export default ReactApp
+export default RenderApp
