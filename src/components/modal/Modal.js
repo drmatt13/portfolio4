@@ -13,7 +13,7 @@ const Modal = ({setRoute, modal, setModal, examples}) => {
         <div className="modal-exit-btn box-shadow1" onClick={() => setModal(null)}>
           <i className="fas fa-times"></i>
         </div>
-          <Suspense fallback={<>Loading</>}>
+          <Suspense fallback={<></>}>
             <App setRoute={setRoute} examples={examples} />
           </Suspense>
       </div>

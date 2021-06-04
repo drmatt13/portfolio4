@@ -11,7 +11,7 @@
 
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   padding: 5vw;
   padding-bottom: calc(5vw + 65px);
 }
@@ -24,8 +24,11 @@
 
 .modal-master-container {
   position: relative;
+  height: 65vh;
   max-height: 500px;
-  width: 700px;
+  min-width: 300px;
+  width: 60vw;
+  max-width: 800px;
   border-radius: 20px;
 
 
