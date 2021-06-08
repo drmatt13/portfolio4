@@ -1,27 +1,55 @@
 .react-app-primary-background {
-  position: fixed;
-  top: 0;
-  height: 100vh;
-  width: 100%;
-  /* background-color: rgba(0, 0, 0, 0.5); */
+  position: absolute;
+	width: 100%;
+	height: 100%;
+	background: inherit;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat; 
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 70px;
 }
 
 .react-app-secondary-background {
-  border-radius: 20px;
-  height: 80vh;
-  width: 90%;
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  position: relative;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .react-app-container {
+  position: relative;
+  background: inherit;
+  background-size: 0%;
+  height: 80vh;
+  width: 90%;
+  z-index: 1;
+  border-radius: 20px;
+  margin-bottom: 70px;
+}
+
+.react-app-container:before {
+	content: "";
+	position: absolute;
+  border-radius: 20px;
+	background: inherit;
+  background-size: cover;
+	z-index: -1;
   height: 100%;
   width: 100%;
-  position: relative;
+	filter: blur(10px);
+  box-shadow: rgba(0, 0, 0, 1) 5px -10px 15px;
+}
+
+.react-app-container:after {
+  content: "";
+  border-radius: 20px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  top: 0;
+  background-color: rgba(130, 130, 130, 0.8);
+  box-shadow: rgb(22, 41, 49) 0px 2px 4px 0px, rgb(0, 0, 0) 0px 2px 16px 0px;
 }

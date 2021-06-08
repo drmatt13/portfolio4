@@ -5,9 +5,8 @@
 .PATH__grid {
   display: grid;
   background-color: rgba(0, 0, 0, 0.5);
-  position: sticky;
+  /* position: sticky; */
   left: 0;
-  /* padding-right: 2.5vh; */
 }
 
 .PATH__grid div {

@@ -30,7 +30,7 @@ const mobile = /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile
 
 // different backgrounds for web vs mobile
 const backgroundImage = !mobile 
-  ? "https://free4kwallpapers.com/uploads/originals/2020/10/24/cityscape-photography--boston--usa--overcast--city-lights-wallpaper.jpg"
+  ? "https://images.alphacoders.com/461/461992.jpg"
   : "https://images.unsplash.com/photo-1564906527851-a0dbcff597f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80";
 
 function App() {
@@ -60,10 +60,10 @@ function App() {
       className="master-portfolio-container"
       ref={masterContainerRef}
       style={{
-        backgroundImage: `url(${backgroundImage})`,
-        height: '100vh',
+        background: `url(${backgroundImage}) no-repeat`,
+        backgroundAttachment: 'fixed',
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        height: '100vh',
         position: 'relative',
         overflowY: 'auto'
       }}
@@ -72,9 +72,21 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/:app" component={RenderApp} />
       </Switch>
-      {modal && <Modal setRoute={setRoute} modal={modal} setModal={setModal} examples={examples} />}
+      {modal && <Modal 
+        mobile={mobile} 
+        modal={modal} 
+        setModal={setModal} 
+        setRoute={setRoute} 
+        examples={examples} 
+      />}
       <div id="modal" />
-      <Navbar mobile={mobile} masterContainer={masterContainer} redirect={redirect} modal={modal} setModal={setModal} />
+      <Navbar 
+        mobile={mobile} 
+        masterContainer={masterContainer} 
+        modal={modal} 
+        setModal={setModal}
+        redirect={redirect}
+      />
     </div>
   </Router>
 }

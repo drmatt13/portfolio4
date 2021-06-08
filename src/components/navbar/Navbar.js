@@ -28,19 +28,39 @@ const Navbar = ({mobile, masterContainer, redirect, modal, setModal}) => {
 
   return (
     <div className={`master-navbar-container ${mobile ? "navbar-mobile" : "navbar-web"}`} ref={masterNavbarRef}>
-      <div className="navbar-btn" ref={homeRef} onClick={() => redirect("/")} onTouchStart={() => addHighlight(homeRef.current)} onTouchEnd={() => removeHighlight(homeRef.current)}>
+      <div className="navbar-btn" ref={homeRef} 
+        onClick={() => redirect("/")} 
+        onTouchStart={() => addHighlight(homeRef.current)} 
+        onTouchEnd={() => removeHighlight(homeRef.current)}
+      >
         <i className="fas fa-home"></i>
       </div>
-      <div className="navbar-btn" ref={codeRef} onClick={() => toggleModal("Examples")} onTouchStart={() => addHighlight(codeRef.current)} onTouchEnd={() => removeHighlight(codeRef.current)}>
+      <div className="navbar-btn" ref={codeRef} 
+        onClick={() => toggleModal("Examples")} 
+        onTouchStart={() => addHighlight(codeRef.current)} 
+        onTouchEnd={() => removeHighlight(codeRef.current)}
+      >
         <i className="fas fa-laptop-code"></i>
       </div>
-      <div className="navbar-btn" ref={contactRef} onClick={() => toggleModal("Contact")} onTouchStart={() => addHighlight(contactRef.current)} onTouchEnd={() => removeHighlight(contactRef.current)}>
+      <div className="navbar-btn" ref={contactRef} 
+        onClick={() => toggleModal("Contact")} 
+        onTouchStart={() => addHighlight(contactRef.current)} 
+        onTouchEnd={() => removeHighlight(contactRef.current)}
+      >
         <i className="far fa-address-card"></i>
       </div>
-      <div className="navbar-btn" ref={aboutRef} onClick={() => toggleModal("About")} onTouchStart={() => addHighlight(aboutRef.current)} onTouchEnd={() => removeHighlight(aboutRef.current)}>
+      <div className="navbar-btn" ref={aboutRef} 
+        onClick={() => toggleModal("About")} 
+        onTouchStart={() => addHighlight(aboutRef.current)} 
+        onTouchEnd={() => removeHighlight(aboutRef.current)}
+      >
         <i className="fas fa-question"></i>
       </div>
-      <div className="navbar-btn" ref={settingsRef} onClick={() => toggleModal("Settings")} onTouchStart={() => addHighlight(settingsRef.current)} onTouchEnd={() => removeHighlight(settingsRef.current)}>
+      <div className="navbar-btn" ref={settingsRef} 
+        onClick={() => toggleModal("Settings")} 
+        onTouchStart={() => addHighlight(settingsRef.current)} 
+        onTouchEnd={() => removeHighlight(settingsRef.current)}
+      >
         <i className="fas fa-cog"></i>
       </div>
     </div>

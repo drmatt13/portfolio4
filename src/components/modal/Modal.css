@@ -5,8 +5,7 @@
   width: 100%;
 
   
-  background-color: rgba(0, 0, 0, 0.5);
-  /* background-color: rgba(255, 255, 255, 0.3); */
+  background-color: rgba(0, 0, 0, 0.75);
 
 
   display: flex;
@@ -14,6 +13,7 @@
   align-items: center;
   padding: 5vw;
   padding-bottom: calc(5vw + 65px);
+  z-index: 2;
 }
 
 .modal-secondary-background {
@@ -30,9 +30,6 @@
   width: 60vw;
   max-width: 800px;
   border-radius: 20px;
-
-
-  /* background-color: rgba(255, 255, 255, 0.6); */
   background-color: rgba(255, 255, 255, 0.3);
 
 
@@ -53,10 +50,14 @@
   align-items: center;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 50%;
-  transition: background-color 0.05s ease-in;
+  transition: background-color 0.075s ease-in;
 }
 
-.modal-exit-btn:hover {
+.modal-exit-hover:hover {
   cursor: pointer;
-  background-color: rgba(255, 99, 71, 0.75);
+  background-color: rgba(255, 99, 71, 0.85);
+}
+
+.mobile-exit-highlight {
+  background-color: rgba(255, 99, 71, 0.85);
 }

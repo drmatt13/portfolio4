@@ -16,12 +16,13 @@ const RenderApp = () => {
   }, [app]);
 
   return <>
-    <div className="react-app-primary-background">
-      <div className="react-app-secondary-background fade-in">
+    <div className="react-app-primary-background fade-in">
+      <div className="react-app-secondary-background fade-in" />
+      <div className="react-app-container fade-in">
         <Suspense fallback={<>Loading</>}>
           <App />
         </Suspense>
-      </div>
+      </div>  
     </div>
   </>
 }
