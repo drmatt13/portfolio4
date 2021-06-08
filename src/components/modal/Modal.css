@@ -13,7 +13,7 @@
   align-items: center;
   padding: 5vw;
   padding-bottom: calc(5vw + 65px);
-  z-index: 2;
+  z-index: 1;
 }
 
 .modal-secondary-background {

@@ -42,7 +42,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="HOME-mini-bio p-10 HOME-icey">
+        <div className="HOME-mini-bio p-10 HOME-icey fade-in">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti id ex mollitia sequi quasi laboriosam quia, ad voluptate quisquam minus aliquid, veritatis ducimus cumque officiis? Iure blanditiis sit quidem eum eos nobis doloremque fugiat! Beatae sequi molestias voluptas eligendi id commodi eos dicta eaque adipisci quia, rerum doloribus eum vero ipsum asperiores, totam possimus! Veritatis ducimus aliquid repellat! Modi aliquid doloremque cupiditate molestias odit nam eum praesentium tenetur nobis, nihil necessitatibus vero reiciendis animi ab voluptates minima reprehenderit accusantium adipisci optio nulla quibusdam aspernatur quisquam officia. Explicabo, provident. Numquam repudiandae facere expedita sit dignissimos iusto libero iste quis molestiae! Exercitationem?</p>
         </div>
 
@@ -51,14 +51,14 @@ const Home = () => {
 
 
       <div className="HOME-container2 Home-container2-padding">
-        <div className="HOME-header-container p-10 HOME-icey">
+        <div className="HOME-header-container p-10 HOME-icey fade-in">
           <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga eligendi fugit necessitatibus delectus provident odio minima voluptate, ipsa sint consectetur, quam a aut vitae minus at quos repudiandae hic sapiente.</h1>
           <br/>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi alias assumenda maxime est laboriosam, magnam ea. Optio dolor quasi reiciendis et, excepturi magni voluptatem quis cupiditate id illo fugiat maiores hic esse est debitis animi doloremque pariatur modi at. Odio.</p>
           
         </div>
         {/* <div className="HOME-mini-bio p-10 b-r-10"></div> */}
-        <div className="HOME-footer-container p-10 f-1 HOME-icey">
+        <div className="HOME-footer-container p-10 f-1 HOME-icey fade-in">
           <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque praesentium veritatis possimus laborum, nisi maiores rerum perferendis et hic. Maxime qui ea minus atque cupiditate, ipsam impedit dolor? Ut, maxime.</h2>
         </div>
       </div>
